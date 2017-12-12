@@ -1,0 +1,550 @@
+[ {
+  "name" : "SCALA EXCHANGE 2017",
+  "location" : "London, UK",
+  "startDate" : "2017-12-14",
+  "endDate" : "2017-12-15"
+}, {
+  "name" : "F(BY) 2017",
+  "location" : "Minsk, Belarus",
+  "startDate" : "2017-12-17"
+}, {
+  "name" : "LAMBDACONF WINTER RETREAT",
+  "location" : "Whistler, BC, Canada",
+  "startDate" : "2018-01-06",
+  "endDate" : "2018-01-09"
+}, {
+  "name" : "JVMCON",
+  "location" : "Ede, The Netherlands",
+  "startDate" : "2018-01-30"
+}, {
+  "name" : "SCALA MATSURI",
+  "location" : "Tokyo, Japan",
+  "startDate" : "2018-03-16",
+  "endDate" : "2018-03-18"
+}, {
+  "name" : "SCALAR",
+  "location" : "Warsaw, Poland",
+  "startDate" : "2018-04-06",
+  "endDate" : "2018-04-07"
+}, {
+  "name" : "SCALASPHERE",
+  "location" : "Kraków, Poland",
+  "startDate" : "2018-04-16",
+  "endDate" : "2018-04-17"
+}, {
+  "name" : "SCALAUA",
+  "location" : "Kyiv, Ukraine",
+  "startDate" : "2018-04-20",
+  "endDate" : "2018-04-21"
+}, {
+  "name" : "FLATMAP(OSLO)",
+  "location" : "Oslo, Norway",
+  "startDate" : "2018-05-03",
+  "endDate" : "2018-05-04"
+}, {
+  "name" : "SCALA DAYS (EUROPE)",
+  "location" : "Berlin, Germany",
+  "startDate" : "2018-05-14",
+  "endDate" : "2018-05-17"
+}, {
+  "name" : "LAMBDACONF 2018",
+  "location" : "Boulder, CO, USA",
+  "startDate" : "2018-06-03",
+  "endDate" : "2018-06-05"
+}, {
+  "name" : "SCALA DAYS (NORTH AMERICA)",
+  "location" : "New York, NY, USA",
+  "startDate" : "2018-06-19",
+  "endDate" : "2018-06-21"
+}, {
+  "name" : "SCALA SWARM",
+  "location" : "Porto, Portugal",
+  "startDate" : "2018-06-20",
+  "endDate" : "2018-06-23"
+}, {
+  "name" : "BEESCALA 2018",
+  "location" : "Ljubljana, Slovenia",
+  "startDate" : "2018-11-22",
+  "endDate" : "2018-11-24"
+}, {
+  "name" : "LAMBDA JAM",
+  "location" : "Chicago",
+  "startDate" : "2013-07-08",
+  "endDate" : "2013-07-10"
+}, {
+  "name" : "SVSS",
+  "location" : "San Francisco",
+  "startDate" : "2013-08-02"
+}, {
+  "name" : "STRANGE LOOP",
+  "location" : "St Louis",
+  "startDate" : "2013-09-18",
+  "endDate" : "2013-09-20"
+}, {
+  "name" : "CUFP",
+  "location" : "Boston",
+  "startDate" : "2013-09-22",
+  "endDate" : "2013-09-24"
+}, {
+  "name" : "ICFP",
+  "location" : "Boston",
+  "startDate" : "2013-09-25",
+  "endDate" : "2013-09-27"
+}, {
+  "name" : "PNWSCALA",
+  "location" : "Portland OR",
+  "startDate" : "2013-10-19",
+  "endDate" : "2013-10-20"
+}, {
+  "name" : "SCALA IO",
+  "location" : "Paris",
+  "startDate" : "2013-10-24",
+  "endDate" : "2013-10-25"
+}, {
+  "name" : "SPLASH",
+  "location" : "Indianapolis",
+  "startDate" : "2013-10-26",
+  "endDate" : "2013-10-31"
+}, {
+  "name" : "LAMBDA JAM",
+  "location" : "Antwerp",
+  "startDate" : "2013-11-11",
+  "endDate" : "2013-11-15"
+}, {
+  "name" : "SCALA EXCHANGE",
+  "location" : "London",
+  "startDate" : "2013-12-02",
+  "endDate" : "2013-12-03"
+}, {
+  "name" : "CODE MESH",
+  "location" : "London",
+  "startDate" : "2013-12-03",
+  "endDate" : "2013-12-05"
+}, {
+  "name" : "DATA DAY TEXAS",
+  "location" : "Austin",
+  "startDate" : "2014-01-11"
+}, {
+  "name" : "LAMBDA DAYS",
+  "location" : "Kraków",
+  "startDate" : "2014-02-27",
+  "endDate" : "2014-02-28"
+}, {
+  "name" : "NORTHEAST SCALA SYMPOSIUM",
+  "location" : "New York City",
+  "startDate" : "2014-03-01",
+  "endDate" : "2014-03-02"
+}, {
+  "name" : "FP EXCHANGE",
+  "location" : "London",
+  "startDate" : "2014-03-14"
+}, {
+  "name" : "SCALAR",
+  "location" : "Warsaw",
+  "startDate" : "2014-04-05"
+}, {
+  "name" : "REACT 2014",
+  "location" : "London",
+  "startDate" : "2014-04-07",
+  "endDate" : "2014-04-09"
+}, {
+  "name" : "PHILLYETE",
+  "location" : "Philadelphia",
+  "startDate" : "2014-04-22",
+  "endDate" : "2014-04-23"
+}, {
+  "name" : "FLATMAP OSLO",
+  "location" : "Oslo",
+  "startDate" : "2014-05-12",
+  "endDate" : "2014-05-13"
+}, {
+  "name" : "ÜBERCONF",
+  "location" : "Denver",
+  "startDate" : "2014-06-24",
+  "endDate" : "2014-06-27"
+}, {
+  "name" : "SCALA DOWNUNDER 2014",
+  "location" : "Auckland, New Zealand",
+  "startDate" : "2014-09-05",
+  "endDate" : "2014-09-06"
+}, {
+  "name" : "SCALA MATSURI 2014",
+  "location" : "Tokyo",
+  "startDate" : "2014-09-06",
+  "endDate" : "2014-09-07"
+}, {
+  "name" : "SCALA SUMMIT",
+  "location" : "Crested Butte",
+  "startDate" : "2014-09-15",
+  "endDate" : "2014-09-19"
+}, {
+  "name" : "STRANGE LOOP",
+  "location" : "St Louis",
+  "startDate" : "2013-09-17",
+  "endDate" : "2013-09-19"
+}, {
+  "name" : "SCALAPEñO 2014",
+  "location" : "Tel-Aviv",
+  "startDate" : "2014-09-22"
+}, {
+  "name" : "SCALA IO",
+  "location" : "Paris",
+  "startDate" : "2014-10-23",
+  "endDate" : "2014-10-24"
+}, {
+  "name" : "SCALA EXCHANGE 14",
+  "location" : "London",
+  "startDate" : "2014-12-08",
+  "endDate" : "2014-12-09"
+}, {
+  "name" : "NORTHEAST SCALA SYMPOSIUM",
+  "location" : "Boston",
+  "startDate" : "2015-01-30",
+  "endDate" : "2015-01-31"
+}, {
+  "name" : "LAMBDA DAYS 2015",
+  "location" : "Cracow",
+  "startDate" : "2015-02-26",
+  "endDate" : "2015-02-27"
+}, {
+  "name" : "SCALADAYS SF",
+  "location" : "San Francisco",
+  "startDate" : "2015-03-16",
+  "endDate" : "2015-03-18"
+}, {
+  "name" : "PHILLYETE",
+  "location" : "Philadelphia",
+  "startDate" : "2014-04-07",
+  "endDate" : "2014-04-08"
+}, {
+  "name" : "SCALAR",
+  "location" : "Warsaw",
+  "startDate" : "2015-04-11"
+}, {
+  "name" : "FLATMAP OSLO",
+  "location" : "Oslo",
+  "startDate" : "2015-04-27",
+  "endDate" : "2015-04-28"
+}, {
+  "name" : "LAMBDACONF 2015",
+  "location" : "Boulder, Colorado",
+  "startDate" : "2015-05-22",
+  "endDate" : "2015-05-24"
+}, {
+  "name" : "SCALADAYS AMS",
+  "location" : "Amsterdam",
+  "startDate" : "2015-06-08",
+  "endDate" : "2015-06-10"
+}, {
+  "name" : "CURRY ON",
+  "location" : "Prague",
+  "startDate" : "2015-07-06",
+  "endDate" : "2015-07-07"
+}, {
+  "name" : "LAMBDA JAM",
+  "location" : "Chicago",
+  "startDate" : "2015-07-15",
+  "endDate" : "2015-07-16"
+}, {
+  "name" : "JVM LANGUAGE SUMMIT",
+  "location" : "Santa Clara",
+  "startDate" : "2015-08-10",
+  "endDate" : "2015-08-12"
+}, {
+  "name" : "SCALA BY THE BAY",
+  "location" : "San Francisco",
+  "startDate" : "2015-08-13",
+  "endDate" : "2015-08-18"
+}, {
+  "name" : "ICFP",
+  "location" : "Vancouver",
+  "startDate" : "2015-08-31",
+  "endDate" : "2015-09-02"
+}, {
+  "name" : "CUFP",
+  "location" : "Vancouver",
+  "startDate" : "2015-09-03",
+  "endDate" : "2015-09-05"
+}, {
+  "name" : "SCALA WORLD",
+  "location" : "Lake District, UK",
+  "startDate" : "2015-09-20",
+  "endDate" : "2015-09-22"
+}, {
+  "name" : "SCALA UP NORTH",
+  "location" : "Toronto",
+  "startDate" : "2015-09-25",
+  "endDate" : "2015-09-26"
+}, {
+  "name" : "APPLY(SCALA)",
+  "location" : "Amsterdam",
+  "startDate" : "2015-10-08",
+  "endDate" : "2015-10-09"
+}, {
+  "name" : "LAMBDA WORLD",
+  "location" : "Cadiz, Spain",
+  "startDate" : "2015-10-24"
+}, {
+  "name" : "SCALA EXCHANGE",
+  "location" : "London",
+  "startDate" : "2015-12-10",
+  "endDate" : "2015-12-11"
+}, {
+  "name" : "SCALA MATSURI",
+  "location" : "Tokyo",
+  "startDate" : "2016-01-30",
+  "endDate" : "2016-01-31"
+}, {
+  "name" : "SCALASPHERE",
+  "location" : "Kraków",
+  "startDate" : "2016-02-11",
+  "endDate" : "2016-02-12"
+}, {
+  "name" : "SCALA DOWNUNDER 2016",
+  "location" : "Auckland, New Zealand",
+  "startDate" : "2016-02-19",
+  "endDate" : "2016-02-20"
+}, {
+  "name" : "TYPELEVEL SUMMIT US",
+  "location" : "Philadelphia",
+  "startDate" : "2016-03-02",
+  "endDate" : "2016-03-03"
+}, {
+  "name" : "NORTHEAST SCALA SYMPOSIUM",
+  "location" : "Philadelphia",
+  "startDate" : "2016-03-04",
+  "endDate" : "2016-03-05"
+}, {
+  "name" : "SCALAUA",
+  "location" : "Kyiv, Ukraine",
+  "startDate" : "2016-04-08",
+  "endDate" : "2016-04-09"
+}, {
+  "name" : "LX SCALA",
+  "location" : "Lisbon, Portugal",
+  "startDate" : "2016-04-09"
+}, {
+  "name" : "PHILLY ETE",
+  "location" : "Philadelphia",
+  "startDate" : "2016-04-11",
+  "endDate" : "2016-04-12"
+}, {
+  "name" : "SCALAR",
+  "location" : "Warsaw",
+  "startDate" : "2016-04-16"
+}, {
+  "name" : "FLATMAP(OSLO)",
+  "location" : "Oslo",
+  "startDate" : "2016-05-02",
+  "endDate" : "2016-05-03"
+}, {
+  "name" : "TYPELEVEL SUMMIT EUROPE",
+  "location" : "Oslo",
+  "startDate" : "2016-05-04"
+}, {
+  "name" : "SCALA DAYS NYC",
+  "location" : "New York City",
+  "startDate" : "2016-05-09",
+  "endDate" : "2016-05-11"
+}, {
+  "name" : "SCALA ITALY",
+  "location" : "Venice, Italy",
+  "startDate" : "2016-05-14"
+}, {
+  "name" : "LAMBDACONF 2016",
+  "location" : "Boulder, Colorado",
+  "startDate" : "2016-05-26",
+  "endDate" : "2016-05-29"
+}, {
+  "name" : "SCALA DAYS BERLIN",
+  "location" : "Berlin",
+  "startDate" : "2016-06-15",
+  "endDate" : "2016-06-17"
+}, {
+  "name" : "CURRY ON",
+  "location" : "Rome",
+  "startDate" : "2016-07-18",
+  "endDate" : "2016-07-19"
+}, {
+  "name" : "SCALAPOLIS",
+  "location" : "Wrocław, Poland",
+  "startDate" : "2016-09-03"
+}, {
+  "name" : "SCALA WORLD",
+  "location" : "Lake District, UK",
+  "startDate" : "2016-09-11",
+  "endDate" : "2016-09-13"
+}, {
+  "name" : "LAMBDA WORLD 2016",
+  "location" : "Cádiz, Spain",
+  "startDate" : "2016-09-30",
+  "endDate" : "2016-10-01"
+}, {
+  "name" : "REACTIVE SUMMIT",
+  "location" : "Austin, TX, US",
+  "startDate" : "2016-10-04",
+  "endDate" : "2016-10-05"
+}, {
+  "name" : "SCALA.IO 2016",
+  "location" : "Lyon, France",
+  "startDate" : "2016-10-27",
+  "endDate" : "2016-10-28"
+}, {
+  "name" : "SCALA2016",
+  "location" : "Amsterdam, Netherlands",
+  "startDate" : "2016-10-30",
+  "endDate" : "2016-10-31"
+}, {
+  "name" : "SCALA BY THE BAY",
+  "location" : "San Francisco, CA",
+  "startDate" : "2016-11-11",
+  "endDate" : "2016-11-13"
+}, {
+  "name" : "BEESCALA",
+  "location" : "Ljubljana, Slovenia",
+  "startDate" : "2016-11-25",
+  "endDate" : "2016-11-26"
+}, {
+  "name" : "SCALAWAVE",
+  "location" : "Gdańsk, Poland",
+  "startDate" : "2016-11-25",
+  "endDate" : "2016-11-26"
+}, {
+  "name" : "SCALA EXCHANGE 2016",
+  "location" : "London, UK",
+  "startDate" : "2016-12-08",
+  "endDate" : "2016-12-09"
+}, {
+  "name" : "F(BY) 2016",
+  "location" : "Minsk, Belarus",
+  "startDate" : "2016-12-10"
+}, {
+  "name" : "LAMBDACONF WINTER RETREAT",
+  "location" : "Crested Butte, CO, USA",
+  "startDate" : "2017-01-08",
+  "endDate" : "2017-01-11"
+}, {
+  "name" : "SCALA BY THE SCHUYLKILL",
+  "location" : "Philadelphia, PA, USA",
+  "startDate" : "2017-01-24"
+}, {
+  "name" : "LAMBDA DAYS 2017",
+  "location" : "Kraków, Poland",
+  "startDate" : "2017-02-09",
+  "endDate" : "2017-02-10"
+}, {
+  "name" : "KATS CONF 2",
+  "location" : "Dublin, Ireland",
+  "startDate" : "2017-02-18"
+}, {
+  "name" : "SCALA MATSURI",
+  "location" : "Tokyo, Japan",
+  "startDate" : "2017-02-25",
+  "endDate" : "2017-02-26"
+}, {
+  "name" : "SCALASPHERE",
+  "location" : "Kraków, Poland",
+  "startDate" : "2017-03-02",
+  "endDate" : "2017-03-03"
+}, {
+  "name" : "TYPELEVEL SUMMIT NYC",
+  "location" : "New York City",
+  "startDate" : "2017-03-23"
+}, {
+  "name" : "NORTHEAST SCALA SYMPOSIUM",
+  "location" : "New York",
+  "startDate" : "2017-03-24",
+  "endDate" : "2017-03-25"
+}, {
+  "name" : "SCALAR",
+  "location" : "Warsaw, Poland",
+  "startDate" : "2017-04-07",
+  "endDate" : "2017-04-08"
+}, {
+  "name" : "SCALAUA",
+  "location" : "Kyiv, Ukraine",
+  "startDate" : "2017-04-07",
+  "endDate" : "2017-04-08"
+}, {
+  "name" : "SCALA DAYS CHICAGO",
+  "location" : "Chicago, IL, USA",
+  "startDate" : "2017-04-18",
+  "endDate" : "2017-04-21"
+}, {
+  "name" : "FLATMAP(OSLO)",
+  "location" : "Oslo, Norway",
+  "startDate" : "2017-05-02",
+  "endDate" : "2017-05-03"
+}, {
+  "name" : "LX SCALA",
+  "location" : "Lisbon, Portugal",
+  "startDate" : "2017-05-12"
+}, {
+  "name" : "SCALA ITALY",
+  "location" : "Rome, Italy",
+  "startDate" : "2017-05-13"
+}, {
+  "name" : "LAMBDACONF 2017",
+  "location" : "Boulder, CO, USA",
+  "startDate" : "2017-05-25",
+  "endDate" : "2017-05-27"
+}, {
+  "name" : "SCALA DAYS COPENHAGEN",
+  "location" : "Copenhagen, Denmark",
+  "startDate" : "2017-05-30",
+  "endDate" : "2017-06-02"
+}, {
+  "name" : "TYPELEVEL SUMMIT COPENHAGEN",
+  "location" : "Copenhagen",
+  "startDate" : "2017-06-03"
+}, {
+  "name" : "SCALA SWARM",
+  "location" : "Porto, Portugal",
+  "startDate" : "2017-06-20",
+  "endDate" : "2017-06-23"
+}, {
+  "name" : "SCALA UP NORTH",
+  "location" : "Vancouver",
+  "startDate" : "2017-07-21",
+  "endDate" : "2017-07-22"
+}, {
+  "name" : "SCALAWAVE",
+  "location" : "Gdańsk, Poland",
+  "startDate" : "2017-07-07",
+  "endDate" : "2017-07-08"
+}, {
+  "name" : "SCALA WORLD",
+  "location" : "Lake District, UK",
+  "startDate" : "2017-09-16",
+  "endDate" : "2017-09-19"
+}, {
+  "name" : "REACTIVE SUMMIT",
+  "location" : "Austin, TX, US",
+  "startDate" : "2017-10-18",
+  "endDate" : "2017-10-20"
+}, {
+  "name" : "SCALA SYMPOSIUM 2017",
+  "location" : "Vancouver, Canada",
+  "startDate" : "2017-10-22",
+  "endDate" : "2017-10-23"
+}, {
+  "name" : "SCALA.IO 2017",
+  "location" : "Lyon, France",
+  "startDate" : "2017-11-02",
+  "endDate" : "2017-11-03"
+}, {
+  "name" : "FUNCTIONAL CONF",
+  "location" : "Bangalore, India",
+  "startDate" : "2017-11-09",
+  "endDate" : "2017-11-11"
+}, {
+  "name" : "SCALE BY THE BAY",
+  "location" : "San Francisco, CA",
+  "startDate" : "2017-11-15",
+  "endDate" : "2017-11-18"
+}, {
+  "name" : "BEESCALA 2017",
+  "location" : "Ljubljana, Slovenia",
+  "startDate" : "2017-11-23",
+  "endDate" : "2017-11-25"
+} ]

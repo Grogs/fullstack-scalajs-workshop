@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET     /webjars/*file              controllers.WebJarAssets.at(file)
+
+# The search results page
+GET     /                           controllers.Default.redirect(to = "/events")
+GET     /events                     controllers.EventsController.search(query: String = "upcoming")
+GET     /image/:confName            controllers.EventsController.image(confName)
+
+# API endpoint for autowire
+GET     /events/api/*path           controllers.EventsController.api(path: String)
+POST    /events/api/*path           controllers.EventsController.api(path: String)
