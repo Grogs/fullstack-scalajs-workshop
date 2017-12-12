@@ -14,7 +14,6 @@ val playJsonVersion = "2.6.7"
 
 lazy val server = project.enablePlugins(PlayScala).settings(
   commonSettings,
-  name := "play-scala-server",
   libraryDependencies ++= Seq(
     ws,
     guice,
@@ -30,7 +29,6 @@ lazy val server = project.enablePlugins(PlayScala).settings(
 ).dependsOn(sharedJvm)
 
 lazy val shared = crossProject.crossType(CrossType.Pure).settings(
-  name := "shared",
   commonSettings,
   libraryDependencies ++= Seq(
     "com.lihaoyi" %%% "autowire" % "0.2.6",
