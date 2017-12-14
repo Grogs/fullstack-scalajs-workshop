@@ -36,8 +36,7 @@ lazy val shared = crossProject.crossType(CrossType.Pure).settings(
     "com.typesafe.play" %% "play-json" % playJsonVersion
   )
 ).jsSettings(
-  libraryDependencies += "org.scala-js" %%% "scalajs-java-time" % "0.2.3",
-  jsEnv := new org.scalajs.jsenv.jsdomnodejs.JSDOMNodeJSEnv()
+  libraryDependencies += "org.scala-js" %%% "scalajs-java-time" % "0.2.3"
 )
   .jsConfigure(_ enablePlugins ScalaJSWeb)
   .enablePlugins(SbtTwirl)
