@@ -50,9 +50,6 @@ lazy val sharedJs = shared.js
 
 
 lazy val client = project.enablePlugins(ScalaJSPlugin, ScalaJSWeb).configs(IntegrationTest).settings(
-  commonSettings ++ Defaults.itSettings,
-  mainClass in Compile := Some("App"),
-  emitSourceMaps in fullOptJS := true,
   resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
   libraryDependencies ++= Seq(
     "org.scala-js" %%% "scalajs-dom" % "0.9.4",
