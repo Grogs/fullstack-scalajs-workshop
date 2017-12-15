@@ -9,7 +9,7 @@ import scala.scalajs.concurrent.JSExecutionContext.Implicits.queue
 object Client extends autowire.Client[String, Reads, Writes] with autowire.Serializers[String, Reads, Writes] {
     def doCall(req: Request): Future[String] =
         Ajax.post(
-            url = "/events/api/" + req.path.mkString("/"),
+            url = "/api/" + req.path.mkString("/"),
             data = JsObject(req.args.mapValues(Json.parse).toSeq).toString()
         ).map(_.responseText)
 

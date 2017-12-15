@@ -12,5 +12,5 @@ GET     /events                     controllers.EventsController.search(query: S
 GET     /image/:confName            controllers.EventsController.image(confName)
 
 # API endpoint for autowire
-GET     /events/api/*path           controllers.EventsController.api(path: String)
-POST    /events/api/*path           controllers.EventsController.api(path: String)
+GET     /api/*path                  controllers.AutowireController.api(path: String)
+POST    /api/*path                  controllers.AutowireController.api(path: String)
