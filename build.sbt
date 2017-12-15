@@ -1,6 +1,4 @@
-
-
-// loads the server project at sbt startup
+//loads the server project at sbt startup
 onLoad in Global := (Command.process("project server", _: State)) compose (onLoad in Global).value
 
 scalaVersion in ThisBuild := "2.12.2"
