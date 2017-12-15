@@ -13,7 +13,7 @@ class ConferenceServiceImpl extends ConferenceService {
 
   private val allEvents =
     Json
-      .parse(Source.fromResource("events/allScalaEvents.json").mkString)
+      .parse(Source.fromResource("events/allScalaEvents.json")("UTF-8").mkString)
       .as[Seq[Conference]]
       .sortBy(_.startDate.toEpochDay)
 

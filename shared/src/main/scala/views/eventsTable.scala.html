@@ -1,27 +1,9 @@
 @import model.Conference
-@(searchResults: Seq[Conference])
+@(conferences: Seq[Conference])
 
 @date(event: Conference) = @{
     s"""${event.startDate}${event.endDate.map(d => s" - $d").getOrElse("")}"""
 }
 
-<div class="columns is-multiline is-3">
-@for(event <- searchResults) {
-    <div class="column is-one-quarter">
-        <div class="is-card card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="/image/@event.name">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="content">
-                    <p class="title is-4">@event.name</p>
-                    <p class="subtitle is-6">@event.location</p>
-                    <p>@date(event)</p>
-                </div>
-            </div>
-        </div>
-    </div>
-}
-</div>
+
+<!-- Add columns wrapper and an entry for each conference here. -->

@@ -6,9 +6,10 @@ import play.api.libs.json.Json
 import scala.io.Source
 
 class GeolocationServiceImpl extends GeolocationService {
+
   private val allLocations =
     Json
-      .parse(Source.fromResource("events/locations.json").mkString)
+      .parse(Source.fromResource("events/locations.json")("UTF-8").mkString)
       .as[Map[String, (Double, Double)]]
 
   def location(event: Conference): Coordinates = {
