@@ -1,13 +1,9 @@
 @import model.Conference
 @(searchResults: Seq[Conference])
 
-
-@date(event: Conference) = {
-@event.startDate @{
-    event.endDate.map(d => s" - $d")
+@date(event: Conference) = @{
+    s"""${event.startDate}${event.endDate.map(d => s" - $d").getOrElse("")}"""
 }
-}
-
 
 <div class="columns is-multiline is-3">
 @for(event <- searchResults) {
