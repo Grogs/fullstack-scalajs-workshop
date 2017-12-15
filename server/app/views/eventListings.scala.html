@@ -12,9 +12,13 @@
     </head>
     <body>
 
-        <!--
-            Add eventsTable and wrapper divs here.
-        -->
+        <div id="container" class="container">
+
+            <div id="event-listings">
+                @eventsTable(searchResults)
+            </div>
+
+        </div>
 
         @scalajs.html.scripts("client", routes.Assets.versioned(_).toString, name => getClass.getResource(s"/public/$name") != null)
         <script type="application/javascript">
