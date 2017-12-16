@@ -29,13 +29,6 @@ object App {
   def main(): Unit = {
     println("Hello from Scala.js")
 
-    querySelect().onchange = (e) => {
-      for {
-        events <- Client[ConferenceService].search(currentQuery()).call() //Note the .call()
-        table = views.html.eventsTable(events).body //Yay, reused code across frontend and backend!
-      } {
-        eventListings().innerHTML = table
-      }
-    }
+    /* Handle user changing the query here */
   }
 }
