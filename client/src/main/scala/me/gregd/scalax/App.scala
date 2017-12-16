@@ -16,8 +16,26 @@ import scala.scalajs.js.annotation.{JSExport, JSExportTopLevel}
 
 @JSExportTopLevel("App")
 object App {
+
+  //Conference cards container
+  def eventListings() = document.getElementById("event-listings")
+
+  //Query
+  def querySelect() = document.getElementById("query").asInstanceOf[Select]
+  def currentQuery() = Query.withNameInsensitive(querySelect().value)
+
+
   @JSExport
   def main(): Unit = {
     println("Hello from Scala.js")
+
+    querySelect().onchange = (e) => {
+      for {
+        events <- Client[ConferenceService].search(currentQuery()).call() //Note the .call()
+        table = views.html.eventsTable(events).body //Yay, reused code across frontend and backend!
+      } {
+        eventListings().innerHTML = table
+      }
+    }
   }
 }
