@@ -13,6 +13,49 @@ class EventsControllerTest extends PlaySpec with GuiceOneAppPerTest {
 
   def page = Jsoup.parse(route(app, FakeRequest(GET, "/events")).map(contentAsString).get)
 
+  "Exercise 3 - Google Map of conferences" should {
+    "add another button for showing the map" in {
+
+      val buttons = page.select("button").asScala
+
+      (buttons.map(_.id) must contain ("show-map")) orElse "We want a new button with the ID `show-map`."
+
+      val mapButtonClasses = page.getElementById("show-map").classNames.asScala
+
+      (mapButtonClasses must contain ("button")) orElse "We need to add the `button` class so Bulma styles it nicely."
+      (mapButtonClasses must contain ("toggle-map-modal")) orElse "We need to add the `toggle-map-modal` so we know this button should open the modal"
+    }
+
+    "bulma card modal for the map" in {
+
+      val maybeModal = page.select("div.modal").asScala.headOption
+
+      (maybeModal mustBe 'defined) orElse "Now add a Bulma 'Modal card' as detailed at: https://bulma.io/documentation/components/modal/"
+
+      val modal = maybeModal.get
+
+      (modal.id mustBe "mapModal") orElse "Give the modal the ID 'mapModal' so we can reference it on the frontend"
+
+
+      val modalBackground = modal.select(".modal-background").asScala.headOption
+      (modalBackground mustBe 'defined) orElse "You need to add a div with the class 'modal-background' to the modal."
+
+      val modalCard = modal.select(".modal-card").asScala.headOption
+      (modalBackground mustBe 'defined) orElse "You also need to add a div with the class 'modal-card' to hold the map. Refer back to https://bulma.io/documentation/components/modal/"
+    }
+
+    "modal must include a container for the google map" in {
+
+      val modal = page.select("div.modal > .modal-card").first
+
+      val mapContainer = modal.getElementById("map")
+
+      (mapContainer must not be null) orElse "You need to create a div within the modal card to put the map into"
+
+      (mapContainer.attr("style") mustBe "height: 500px") orElse "You need to specify the height otherwise it will default to 0px high."
+    }
+  }
+
   "Exercise 2 - eventListings conference selection" should {
     "have a select inside a field inside a control" in {
       (page.select("div.field").size mustBe 1) orElse "We need 3 wrappers around the select. A div with the class `control`, with a div with the `field` class inside, and then inside the field a div with the `select` class. See https://bulma.io/documentation/form/general/"
