@@ -7,7 +7,7 @@ import play.api.mvc.InjectedController
 import services.events.{ConferenceService, ImageService}
 
 @Singleton
-class EventsController @Inject()(eventsService: ConferenceService,
+class EventsController @Inject()(conferenceService: ConferenceService,
                                  webJarAssets: WebJarAssets)
     extends InjectedController {
 
@@ -15,11 +15,11 @@ class EventsController @Inject()(eventsService: ConferenceService,
 
     val query = Query.withNameInsensitive(rawQuery)
 
-    val conferences = eventsService.search(query)
+    val conferences = conferenceService.search(query)
 
     Ok(
       views.html.eventListings(
-        "London",
+        query.entryName,
         conferences
       )(webJarAssets)
     )
