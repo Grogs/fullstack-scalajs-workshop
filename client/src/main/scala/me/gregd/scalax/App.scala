@@ -6,7 +6,6 @@ import model.{Conference, Query, Sort}
 import org.scalajs.dom.ext.PimpedNodeList
 import org.scalajs.dom.html.{Button, Select}
 import org.scalajs.dom.{Event, document}
-import services.{Geolocation, GoogleMaps}
 import services.events.{ConferenceService, GeolocationService}
 
 import scala.concurrent.Future
