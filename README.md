@@ -8,3 +8,6 @@ This will be server-side only and test driven. Run `EventsControllerTest` and fi
 You'll need to modify the server-side only template for the events page. See `eventListings.scala.html`.  
 Then you'll have to build out the shared events table template. See `eventsTable.scala.html`.
 
+Once you're done, start up the application with `sbt run`, browse to http://localhost:9000 and check that you can see the upcoming conferences.
+
+Then move on to exercise two by checking out the `exercise2` branch.
