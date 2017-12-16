@@ -1,0 +1,315 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/sky.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Mermaid -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.css">
+    <style>
+      .mermaid .label  {
+        color: white;
+      }
+
+      .node rect {
+        fill: #005894;
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <style>
+      .reveal .footer {
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        font-size: 0.7em;
+      }
+
+      /*Theme overrides*/
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+        text-transform: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class='footer'>
+        <!-- <a href="https://grogs.github.io/scala-course">grogs.github.io/scala-course</a> -->
+      </div>
+      <div class="slides">
+          <!-- TODO sbt new playframework/play-scala-seed.g8 -->
+          <!-- Expalin project structure with screenshots: https://www.playframework.com/documentation/2.6.x/Anatomy  ??           -->
+        <section data-markdown data-separator="^~~~~" data-separator-vertical="^~" data-notes="^Note:">
+          <script type="text/template"> 
+### Setup
+```
+git clone https://github.com/Grogs/scalax-scalajs-workshop.git
+cd scalax-scalajs-workshop
+sbt compile
+```
+~~~~
+## Scala.js workshop  
+
+### Greg Dorrell
+
+~~~~
+
+### About me
+ - Backend Scala dev at Expedia
+ - Maintainer of [javadoc.io](http://javadoc.io/)
+ - Using Scala.js for personal projects for ~2 years.
+
+~~~~
+Before we get any further...  
+
+### Setup
+```
+git clone https://github.com/Grogs/scalax-scalajs-workshop.git
+cd scalax-scalajs-workshop
+sbt compile
+```
+
+Note:
+This will take a while, so kick it off whilst I continue talking.
+~~~~
+
+### The plan
+You'll feel comfortable going away and building simple apps with Scala.js.
+
+[http://scalax-scalajs-workshop.herokuapp.com](http://scalax-scalajs-workshop.herokuapp.com)
+
+Note:
+ - We'll have an introductory talk. I can tell you a bit about Scala.js, and its current state. 
+ - Then we'll spend the remaining time building out this Scala conference listing site
+
+
+
+
+
+
+~~~~
+## Scala.js
+~
+So what is Scala.js?
+~
+
+A Scala to JavaScript compiler
+
+Note:
+
+Started by Sebastien Doeraene at EPFL around 4 years ago 
+
+Hooks into the Scala compiler, and instead of emitting JVM bytecode, it emits JavaScript
+
+~
+You can use it to write your JavaScript web frontend.  
+
+But there are other usecases.  
+
+Note:
+* Web frontend is where most of the community's effort is going, but there's nothing that technically limits it
+* People have used it with NodeJS on the server.
+* Chrome extensions
+* I've used that a little myself: Electron with Scala.js, which leverages NodeJS
+~
+
+To use it, add a plugin to your SBT build, and enable it for one of your projects.
+
+Note:
+* So this assumes you're using SBT. Gradle and Maven aren't supported.
+* You can have projects that are cross compile projects for JVM and JS, or just pure JS projects.
+* Not everything works (a lot of the Java stdlib isn't available, which Scala stdlib uses).
+** But there's enough for it to be usable for a lot of usecases. 
+** And it's gettng better over time
+~
+Or clone one of the [skeleton projects](https://www.scala-js.org/libraries/skeletons.html) to get started: 
+- [A pure Scala.js project](https://github.com/lihaoyi/workbench-example-app)
+- [Play server and Scala.js client](https://github.com/vmunier/play-with-scalajs-example)
+- [Scala.js targetting NodeJS](https://github.com/rockymadden/scala-node-example)
+
+~
+Why use Scala.js?  
+
+Note:
+* We're quite used to web frontends being a seperate codebase with a largely seperate dev team.
+* But there's a few advantages to having one codebase with shared code across the frontend and backend, which I find quite compelling
+~
+Share domain model and business logic across client and server.  
+
+You can refactor some code on the server and the template will be updated!  <!-- .element: class="fragment" -->
+
+Note:
+* You can refactor code (e.g. rename a field on a class in your domain model) and the frontend is just update, without a coordination overhead.
+* E.g. Validation logic - you want to do validation on the client-side to provide an rich interactive experience...
+** But you need to run it on the server-side to make sure it can't be bypassed.
+** It seems a shame to write that twice. Overhead, and there can be differences, which makes it for a poor user experience.
+~
+Make the client more typesafe  
+
+Catch more errors at compile time
+
+Note: 
+Much moreso than JavaScript.  
+Even linters aren't going to get you that much typesafety. I'm sure they're getting better and better, but that can't compete with a language with a much richer type system.
+~
+The type safety goes further than Typescript.
+
+In TypeScript, you can optionally add types.  
+In Scala.js, you can optionally go Dynamic.<!-- .element: class="fragment" -->
+
+Note:
+* Fundermentally, in typescript you can optional add types and gradually make parts of your codebase more typesafe.
+* But with Scala.js, by default everything is typed and you can optionally go dynamic
+** allowing you to call potentially non-existing fields or methods on an object.
+** Which can be very useful for using an existing JavaScript library, but is something you really want to avoid.
+~
+Even your templates are typesafe  
+
+ - Play's Twirl templates now work in Scala.js
+ - Scalatags is a popular approach
+
+[Rapture HTML Demo](https://embed.scalafiddle.io/embed?sfid=hMgI9Bu/1)<!-- .element: class="fragment" -->
+
+Note:
+* People are already used to generating HTML from code, via React. 
+  * This is popular in Scala.js
+* Jon Pretty's Rapture HTML takes this to the extreme. 
+  * HTML element nesting constaints at compile time
+  * and even 'style' attribute's CSS validated at compile time. 
+  * [Example](https://embed.scalafiddle.io/embed?sfid=hMgI9Bu/1)
+  * See 'Principles of Elegance' talk from ScalaDays NY 2016
+
+~ 
+It's mature. Version 1.0 is well on the way.
+
+Note:
+* No longer experimental (since Feb 2015). 
+~
+Already has a rich ecosystem.
+
+~
+Lots of existing pure scala libraries cross-compile:
+- Scalaz
+- Cats
+- Shapeless
+- Monix
+- Circe
+- Rapture
+- Play JSON, Twirl templates
+- ScalaTest
+- Most of the standard library, e.g. Futures
+
+<!--
+  TODO
+  Dive into pure-scala libraries
+    Futures map very well to JavaScript promises and allow you to move away from callback hell.
+  -->
+~
+Typesafe fascades for existing libraries (varying quality):
+- DOM
+- jQuery
+- React
+- Angular
+- Vue.js
+- D3
+- lots more
+
+Note:
+- DOM fascades are included.
+- scalajs-react was redesigned/simplified this year. Used to be implicit heavy, but not anymore.
+- Some libraries are inherently stringly-typed like Vue or D3, so you don't gain much safety from the fascade, but good for interop. 
+
+<!--
+  TODO
+  TALK ABOUT REACT 1.0
+  Dive into the Fascades
+  DOM is very good
+-->
+~
+Built for Scala.js:
+- ScalaTags
+- ScalaCss
+- Diode
+- autowire
+- workbench
+
+Note:
+There were more libraries like upickle and utest that filled gaps before existing libraries supported Scala.js.
+~
+Scala.js even looks similar to JavaScript/ES6, but with types.
+
+[Demo](https://embed.scalafiddle.io/embed?sfid=8D8UXdW/6)
+~
+###Resources  
+
+[Scala.js Website](https://www.scala-js.org/)  has tutorials, libraries, skeleton projects
+
+[Scala.js Gitter](https://gitter.im/scala-js/scala-js)
+
+
+[Hands-on Scala.js](http://www.lihaoyi.com/hands-on-scala-js/) by Li Haoyi  
+[Scala.js SPA-tutorial](https://ochrons.github.io/scalajs-spa-tutorial/en/index.html) by Otto Chrons
+
+[Why I bet on Scala.js](http://www.lihaoyi.com/post/FromfirstprinciplesWhyIbetonScalajs.html) by Li Haoyi
+
+Note:
+Lots of the libraries mentioned have gitter channels. But you can always go to the scala-js to get pointed in the right direction.
+~
+Any questions so far?
+
+Note:
+Before we move on
+~
+### What I didn't cover
+
+- Changes in Scala.js dependency management
+- Testing
+
+Note:
+- These are important areas which have evolved/improved in the last year
+- These are definitely things you should care about if you want to use Scala.js in customer facing projects
+- But then we start needing to thinking about bringing in non-JVM dependencies like selenium and npm.
+- Grab me if you want to talk about these
+          </script>         
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+  </body>
+</html>
