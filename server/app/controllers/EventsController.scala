@@ -19,7 +19,7 @@ class EventsController @Inject()(conferenceService: ConferenceService,
 
     Ok(
       views.html.eventListings(
-        "London",
+        query.entryName,
         conferences
       )(webJarAssets)
     )
