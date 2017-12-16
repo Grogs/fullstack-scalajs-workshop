@@ -10,13 +10,13 @@ Steps:
 2. Add an empty Map inside the modal.
     * Put the map related code in the `me.gregd.scalax.GoogleMaps.render` which runs every time the user opens the Map.
     * See https://developers.google.com/maps/documentation/javascript/examples/map-simple
+    * `render` has the element you should render the map to as a parameter.
     * NOTE: In the docs a JavaScript object literal is used when creating the `Map`, and the center's latitude and logitude.
       But we don't pass object literals from ScalaJS if we can avoid it. We want type safety! 
       So, instead, you will have to pass a instance of `MapOptions` to `Map` and create a `LatLng` for the center.
 
-3. Add a Marker for each Hotel. 
+3. Add a Marker for each conference. 
     * See https://developers.google.com/maps/documentation/javascript/examples/marker-simple
-    * You'll have to call the backend for the hotels again, in the same way we did last week using the Autowire Client.
     * NOTE: Again, like the Map, we won't use an object literal to configure the marker, use `MarkerOptions` instead.
 
 4. Update the Map's LatLngBounds, so the Map focuses on the right area. 
@@ -67,7 +67,6 @@ Now go to `me.gregd.scalax.App` in the client and update the main method (which 
 
 Let's start by fleshing out the event listings. Currently it's a blank page; let's show the upcoming conferences that are being passed through from the `EventsController`.  
 
- 
 This will be server-side only and test driven. Run `EventsControllerTest` and fix the failing tests.  
 
 You'll need to modify the server-side only template for the events page. See `eventListings.scala.html`.  
