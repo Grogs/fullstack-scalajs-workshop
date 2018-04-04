@@ -14,23 +14,23 @@ class EventsControllerTest extends PlaySpec with GuiceOneAppPerTest {
   def page = Jsoup.parse(route(app, FakeRequest(GET, "/events")).map(contentAsString).get)
 
   "Exercise 3 - Google Map of conferences" should {
-    "add another button for showing the map" in {
+    "add a button to the form to open the map" in {
 
       val buttons = page.select("button").asScala
 
-      (buttons.map(_.id) must contain ("show-map")) orElse "We want a new button with the ID `show-map`."
+      (buttons.map(_.id) must contain ("show-map")) orElse "You need to an a 'button' element to the form, and give it the ID `show-map`."
 
       val mapButtonClasses = page.getElementById("show-map").classNames.asScala
 
-      (mapButtonClasses must contain ("button")) orElse "We need to add the `button` class so Bulma styles it nicely."
-      (mapButtonClasses must contain ("toggle-map-modal")) orElse "We need to add the `toggle-map-modal` so we know this button should open the modal"
+      (mapButtonClasses must contain ("button")) orElse "You need to add the `button` class to the 'button' element. This feels redundant, but is need for Bulma to make it look nice."
+      (mapButtonClasses must contain ("toggle-map-modal")) orElse "You also need to add the `toggle-map-modal` which we will use from the frontend ScalaJS code."
     }
 
     "bulma card modal for the map" in {
 
       val maybeModal = page.select("div.modal").asScala.headOption
 
-      (maybeModal mustBe 'defined) orElse "Now add a Bulma 'Modal card' as detailed at: https://bulma.io/documentation/components/modal/"
+      (maybeModal mustBe 'defined) orElse "Now add a Bulma 'Modal card' which will contain the map. You can copy the markup from an example at: https://bulma.io/documentation/components/modal/"
 
       val modal = maybeModal.get
 
@@ -52,7 +52,7 @@ class EventsControllerTest extends PlaySpec with GuiceOneAppPerTest {
 
       (mapContainer must not be null) orElse "You need to create a div within the modal card to put the map into"
 
-      (mapContainer.attr("style") mustBe "height: 500px") orElse "You need to specify the height otherwise it will default to 0px high."
+      (mapContainer.attr("style") mustBe "height: 500px") orElse "You need to specify the height otherwise it will default to 0px high. You should do this will an inline style declaration by adding a 'style' attribute to the modal."
     }
   }
 
