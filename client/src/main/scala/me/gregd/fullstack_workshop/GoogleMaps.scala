@@ -1,10 +1,7 @@
-package me.gregd.scalax
+package me.gregd.fullstack_workshop
 
-import google.maps.InfoWindowOptions
 import model.{Conference, Coordinates}
 import org.scalajs.dom.Element
-
-import scala.scalajs.js
 
 object GoogleMaps {
   def render(events: Seq[(Conference, Coordinates)], target: Element): Unit = {

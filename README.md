@@ -8,7 +8,7 @@ Steps:
     * Fix the new failing tests in `EventsControllerTest`.
 
 2. Add an empty Map inside the modal.
-    * Put the map related code in the `me.gregd.scalax.GoogleMaps.render` which runs every time the user opens the Map.
+    * Put the map related code in the `me.gregd.fullstack_workshop.GoogleMaps.render` which runs every time the user opens the Map.
     * See https://developers.google.com/maps/documentation/javascript/examples/map-simple for an example of the code you need to add to `GoogleMaps.render`
     * NOTE: In Google's example they pass JavaScript object literal is used when creating the `Map`, and the center's latitude and logitude.
       But object literals are the same as a Map, they're not type safe! In Scala we would prefer to use a class with concrete fields.
