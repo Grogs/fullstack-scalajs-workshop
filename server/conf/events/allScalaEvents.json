@@ -1,27 +1,4 @@
 [ {
-  "name" : "SCALA EXCHANGE 2017",
-  "location" : "London, UK",
-  "startDate" : "2017-12-14",
-  "endDate" : "2017-12-15"
-}, {
-  "name" : "F(BY) 2017",
-  "location" : "Minsk, Belarus",
-  "startDate" : "2017-12-17"
-}, {
-  "name" : "LAMBDACONF WINTER RETREAT",
-  "location" : "Whistler, BC, Canada",
-  "startDate" : "2018-01-06",
-  "endDate" : "2018-01-09"
-}, {
-  "name" : "JVMCON",
-  "location" : "Ede, The Netherlands",
-  "startDate" : "2018-01-30"
-}, {
-  "name" : "SCALA MATSURI",
-  "location" : "Tokyo, Japan",
-  "startDate" : "2018-03-16",
-  "endDate" : "2018-03-18"
-}, {
   "name" : "SCALAR",
   "location" : "Warsaw, Poland",
   "startDate" : "2018-04-06",
@@ -29,7 +6,7 @@
 }, {
   "name" : "SCALASPHERE",
   "location" : "Kraków, Poland",
-  "startDate" : "2018-04-16",
+  "startDate" : "2018-04-15",
   "endDate" : "2018-04-17"
 }, {
   "name" : "SCALAUA",
@@ -47,10 +24,18 @@
   "startDate" : "2018-05-14",
   "endDate" : "2018-05-17"
 }, {
-  "name" : "LAMBDACONF 2018",
+  "name" : "TYPELEVEL SUMMIT BERLIN",
+  "location" : "Berlin",
+  "startDate" : "2018-05-18"
+}, {
+  "name" : "LAMBDACONF",
   "location" : "Boulder, CO, USA",
   "startDate" : "2018-06-03",
   "endDate" : "2018-06-05"
+}, {
+  "name" : "LX SCALA",
+  "location" : "Lisbon, Portugal",
+  "startDate" : "2018-06-08"
 }, {
   "name" : "SCALA DAYS (NORTH AMERICA)",
   "location" : "New York, NY, USA",
@@ -62,15 +47,57 @@
   "startDate" : "2018-06-20",
   "endDate" : "2018-06-23"
 }, {
-  "name" : "BEESCALA 2018",
+  "name" : "SCALAPEñO",
+  "location" : "Beersheba, Israel",
+  "startDate" : "2018-07-02"
+}, {
+  "name" : "SCALAWAVE",
+  "location" : "Gdańsk, Poland",
+  "startDate" : "2018-09-06",
+  "endDate" : "2018-09-08"
+}, {
+  "name" : "SCALA ITALY",
+  "location" : "Florence, Italy",
+  "startDate" : "2018-09-14",
+  "endDate" : "2018-09-15"
+}, {
+  "name" : "LAMBDA WORLD",
+  "location" : "Seattle, WA, USA",
+  "startDate" : "2018-09-17",
+  "endDate" : "2018-09-18"
+}, {
+  "name" : "SCALA SYMPOSIUM",
+  "location" : "St. Louis, Missouri, United States",
+  "startDate" : "2018-09-27",
+  "endDate" : "2018-09-28"
+}, {
+  "name" : "LAMBDA WORLD",
+  "location" : "Cádiz, Spain",
+  "startDate" : "2018-10-25",
+  "endDate" : "2018-10-26"
+}, {
+  "name" : "BEESCALA",
   "location" : "Ljubljana, Slovenia",
   "startDate" : "2018-11-22",
   "endDate" : "2018-11-24"
+}, {
+  "name" : "SCALA EXCHANGE",
+  "location" : "London, UK",
+  "startDate" : "2018-12-13",
+  "endDate" : "2018-12-14"
+}, {
+  "name" : "SCALA MATSURI 2013",
+  "location" : "Tokyo",
+  "startDate" : "2013-03-02"
 }, {
   "name" : "LAMBDA JAM",
   "location" : "Chicago",
   "startDate" : "2013-07-08",
   "endDate" : "2013-07-10"
+}, {
+  "name" : "SCALAPEñO 2013",
+  "location" : "Tel Aviv, Israel",
+  "startDate" : "2013-07-17"
 }, {
   "name" : "SVSS",
   "location" : "San Francisco",
@@ -111,8 +138,8 @@
   "startDate" : "2013-11-11",
   "endDate" : "2013-11-15"
 }, {
-  "name" : "SCALA EXCHANGE",
-  "location" : "London",
+  "name" : "SCALA EXCHANGE 2013",
+  "location" : "London, UK",
   "startDate" : "2013-12-02",
   "endDate" : "2013-12-03"
 }, {
@@ -125,8 +152,8 @@
   "location" : "Austin",
   "startDate" : "2014-01-11"
 }, {
-  "name" : "LAMBDA DAYS",
-  "location" : "Kraków",
+  "name" : "LAMBDA DAYS 2014",
+  "location" : "Kraków, Poland",
   "startDate" : "2014-02-27",
   "endDate" : "2014-02-28"
 }, {
@@ -174,7 +201,7 @@
   "endDate" : "2014-09-07"
 }, {
   "name" : "SCALA SUMMIT",
-  "location" : "Crested Butte",
+  "location" : "Crested Butte, CO, USA",
   "startDate" : "2014-09-15",
   "endDate" : "2014-09-19"
 }, {
@@ -184,7 +211,7 @@
   "endDate" : "2013-09-19"
 }, {
   "name" : "SCALAPEñO 2014",
-  "location" : "Tel-Aviv",
+  "location" : "Ramat Gan, Israel",
   "startDate" : "2014-09-22"
 }, {
   "name" : "SCALA IO",
@@ -192,8 +219,8 @@
   "startDate" : "2014-10-23",
   "endDate" : "2014-10-24"
 }, {
-  "name" : "SCALA EXCHANGE 14",
-  "location" : "London",
+  "name" : "SCALA EXCHANGE 2014",
+  "location" : "London, UK",
   "startDate" : "2014-12-08",
   "endDate" : "2014-12-09"
 }, {
@@ -203,7 +230,7 @@
   "endDate" : "2015-01-31"
 }, {
   "name" : "LAMBDA DAYS 2015",
-  "location" : "Cracow",
+  "location" : "Kraków, Poland",
   "startDate" : "2015-02-26",
   "endDate" : "2015-02-27"
 }, {
@@ -282,11 +309,11 @@
   "endDate" : "2015-10-09"
 }, {
   "name" : "LAMBDA WORLD",
-  "location" : "Cadiz, Spain",
+  "location" : "Cádiz, Spain",
   "startDate" : "2015-10-24"
 }, {
-  "name" : "SCALA EXCHANGE",
-  "location" : "London",
+  "name" : "SCALA EXCHANGE 2015",
+  "location" : "London, UK",
   "startDate" : "2015-12-10",
   "endDate" : "2015-12-11"
 }, {
@@ -299,6 +326,11 @@
   "location" : "Kraków",
   "startDate" : "2016-02-11",
   "endDate" : "2016-02-12"
+}, {
+  "name" : "LAMBDA DAYS 2016",
+  "location" : "Kraków, Poland",
+  "startDate" : "2016-02-18",
+  "endDate" : "2016-02-19"
 }, {
   "name" : "SCALA DOWNUNDER 2016",
   "location" : "Auckland, New Zealand",
@@ -337,6 +369,10 @@
   "location" : "Oslo",
   "startDate" : "2016-05-02",
   "endDate" : "2016-05-03"
+}, {
+  "name" : "SCALAPEñO 2016",
+  "location" : "Ramat Gan, Israel",
+  "startDate" : "2016-05-03"
 }, {
   "name" : "TYPELEVEL SUMMIT EUROPE",
   "location" : "Oslo",
@@ -528,6 +564,11 @@
   "startDate" : "2017-10-22",
   "endDate" : "2017-10-23"
 }, {
+  "name" : "LAMBDA WORLD",
+  "location" : "Cádiz, Spain",
+  "startDate" : "2017-10-26",
+  "endDate" : "2017-10-27"
+}, {
   "name" : "SCALA.IO 2017",
   "location" : "Lyon, France",
   "startDate" : "2017-11-02",
@@ -547,4 +588,41 @@
   "location" : "Ljubljana, Slovenia",
   "startDate" : "2017-11-23",
   "endDate" : "2017-11-25"
+}, {
+  "name" : "SCALA EXCHANGE 2017",
+  "location" : "London, UK",
+  "startDate" : "2017-12-14",
+  "endDate" : "2017-12-15"
+}, {
+  "name" : "F(BY) 2017",
+  "location" : "Minsk, Belarus",
+  "startDate" : "2017-12-17"
+}, {
+  "name" : "LAMBDACONF WINTER RETREAT",
+  "location" : "Whistler, BC, Canada",
+  "startDate" : "2018-01-06",
+  "endDate" : "2018-01-09"
+}, {
+  "name" : "JVMCON",
+  "location" : "Ede, The Netherlands",
+  "startDate" : "2018-01-30"
+}, {
+  "name" : "LAMBDA DAYS 2018",
+  "location" : "Kraków, Poland",
+  "startDate" : "2018-02-22",
+  "endDate" : "2018-02-23"
+}, {
+  "name" : "SCALA MATSURI",
+  "location" : "Tokyo, Japan",
+  "startDate" : "2018-03-16",
+  "endDate" : "2018-03-18"
+}, {
+  "name" : "NORTHEAST SCALA SYMPOSIUM",
+  "location" : "Cambridge, MA",
+  "startDate" : "2018-03-18",
+  "endDate" : "2018-03-20"
+}, {
+  "name" : "TYPELEVEL SUMMIT BOSTON",
+  "location" : "Cambridge, Massachusetts",
+  "startDate" : "2018-03-20"
 } ]
