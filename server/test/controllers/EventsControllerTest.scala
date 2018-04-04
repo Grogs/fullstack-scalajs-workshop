@@ -44,7 +44,7 @@ class EventsControllerTest extends PlaySpec with GuiceOneAppPerTest {
     }
 
     "container an entry for every upcoming conference" in {
-      (conferenceDivs.size mustEqual 13) orElse "Now add a div for each event. See https://www.playframework.com/documentation/2.6.x/ScalaTemplates#iterating"
+      (conferenceDivs.size mustEqual 18) orElse "Now add a div for each event. See https://www.playframework.com/documentation/2.6.x/ScalaTemplates#iterating"
     }
 
     "use Bulma's column layout" in {
@@ -77,9 +77,9 @@ class EventsControllerTest extends PlaySpec with GuiceOneAppPerTest {
       }
 
       val scalaMatsuriCard = conferenceDivs(3).select("div.column > div").first.toString
-      (scalaMatsuriCard must include ("SCALA MATSURI")) orElse "now include the name of each conference"
-      (scalaMatsuriCard must include ("Tokyo, Japan")) orElse "now include the location of each conference"
-      (scalaMatsuriCard must include ("2018-03-16 - 2018-03-18")) orElse "now include the dates of each conference using the provided `date` function"
+      (scalaMatsuriCard must include ("FLATMAP(OSLO)")) orElse "now include the name of each conference"
+      (scalaMatsuriCard must include ("Oslo, Norway")) orElse "now include the location of each conference"
+      (scalaMatsuriCard must include ("2018-05-03 - 2018-05-04")) orElse "now include the dates of each conference using the provided `date` function"
     }
   }
 
