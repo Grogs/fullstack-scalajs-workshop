@@ -1,4 +1,4 @@
-package me.gregd.scalax
+package me.gregd.fullstack_workshop
 
 import autowire._
 import model.Sort.{Chronological, Geographical}
