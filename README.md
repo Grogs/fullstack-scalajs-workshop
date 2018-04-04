@@ -8,9 +8,9 @@ Then, we move to ScalaJS! But I haven't written any tests for that...
 So, please start the app by executing:
 `sbt run`
 
-Then browse to [http://localhost:9000](http://localhost:9000) where you should have a listing of the upcoming conferences, and you dropdown which doesn't do anything yet.
+Then browse to [http://localhost:9000](http://localhost:9000) where you should have a listing of the upcoming conferences, and your dropdown which doesn't do anything yet.
 
-Now go to `me.gregd.scalax.App` in the client and update the main method (which runs on page load) to go through these steps:
+Now go to `me.gregd.fullstack_workshop.App` in the client and update the main method (which runs on page load) to go through these steps:
 
 1. Start by adding an event listener to the newly added select element.
     * Take a look through all the events available and decide which one to use: https://www.w3schools.com/jsref/dom_obj_event.asp
