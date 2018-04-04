@@ -14,7 +14,7 @@ import play.api.libs.json._
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 
-object DeployPlugin extends AutoPlugin {
+object DataImportPlugin extends AutoPlugin {
 
 
   override def trigger = allRequirements
