@@ -1,7 +1,7 @@
 package services
 
 import google.maps.{InfoWindow, InfoWindowOptions, Marker}
-import me.gregd.scalax.Client
+import me.gregd.fullstack_workshop.Client
 import autowire._
 import model.{Conference, Coordinates}
 import org.scalajs.dom.Element
