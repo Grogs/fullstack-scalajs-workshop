@@ -9,15 +9,15 @@ Steps:
 
 2. Add an empty Map inside the modal.
     * Put the map related code in the `me.gregd.scalax.GoogleMaps.render` which runs every time the user opens the Map.
-    * See https://developers.google.com/maps/documentation/javascript/examples/map-simple
-    * `render` has the element you should render the map to as a parameter.
-    * NOTE: In the docs a JavaScript object literal is used when creating the `Map`, and the center's latitude and logitude.
-      But we don't pass object literals from ScalaJS if we can avoid it. We want type safety! 
-      So, instead, you will have to pass a instance of `MapOptions` to `Map` and create a `LatLng` for the center.
+    * See https://developers.google.com/maps/documentation/javascript/examples/map-simple for an example of the code you need to add to `GoogleMaps.render`
+    * NOTE: In Google's example they pass JavaScript object literal is used when creating the `Map`, and the center's latitude and logitude.
+      But object literals are the same as a Map, they're not type safe! In Scala we would prefer to use a class with concrete fields.
+      The ScalaJS fascade we're using for Google Maps provides type-safe fascades to use in place of these object literals.
+      So, instead, create an instance of `MapOptions` to use when creating the`Map`, and create a `LatLng` for the center.
 
 3. Add a Marker for each conference. 
     * See https://developers.google.com/maps/documentation/javascript/examples/marker-simple
-    * NOTE: Again, like the Map, we won't use an object literal to configure the marker, use `MarkerOptions` instead.
+    * NOTE: Again, like the Map, we won't use an object literal to configure the marker, create a `MarkerOptions` instead.
 
 4. Update the Map's LatLngBounds, so the Map focuses on the right area. 
     * See https://coderwall.com/p/hojgtq/auto-center-and-auto-zoom-a-google-map
