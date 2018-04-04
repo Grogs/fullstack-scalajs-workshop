@@ -1,16 +1,11 @@
 import java.time.{LocalDate, Month}
 
-import com.typesafe.sbt.packager.docker.DockerPlugin
-import com.typesafe.sbt.packager.docker.DockerPlugin.autoImport._
 import org.jsoup.Jsoup
-import sbt.Keys.{resourceDirectory, streams, version}
+import play.api.libs.json._
+import sbt.Keys.resourceDirectory
 import sbt._
 
-import scala.io.Source
-import scala.util.Try
 import scala.collection.JavaConverters._
-import play.api.libs.json._
-
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 
@@ -77,7 +72,11 @@ object DataImportPlugin extends AutoPlugin {
   }
 
   private object GoogleMaps {
-    import com.koddi.geocoder.Geocoder, scala.concurrent.Future, scala.concurrent.duration._, scala.concurrent.ExecutionContext.Implicits.global
+    import com.koddi.geocoder.Geocoder
+
+    import scala.concurrent.ExecutionContext.Implicits.global
+    import scala.concurrent.Future
+    import scala.concurrent.duration._
     val limiter = RateLimiter(1.second, 50)
     val geo = Geocoder.createAsync("AIzaSyD_Z5sjcBpYzO7dDVkUoCkMSyTbgSXaWaw")
     def geocode(events: Seq[Event]): Future[Map[String, (Double, Double)]] = {
