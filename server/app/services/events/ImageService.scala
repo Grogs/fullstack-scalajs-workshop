@@ -1,7 +1,5 @@
 package services.events
 
-import model.Conference
-
 object ImageService {
 
   def imageName(conferenceName: String): String = {
