@@ -1,4 +1,4 @@
-package me.gregd.scalax
+package me.gregd.fullstack_workshop
 
 import org.scalajs.dom.ext.Ajax
 import play.api.libs.json._
