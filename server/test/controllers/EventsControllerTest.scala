@@ -13,15 +13,15 @@ class EventsControllerTest extends PlaySpec with GuiceOneAppPerTest {
 
   def page = Jsoup.parse(route(app, FakeRequest(GET, "/events")).map(contentAsString).get)
 
-  "Exercise 2 - eventListings conference selection" should {
-    "have a select inside a field inside a control" in {
-      (page.select("div.field").size mustBe 1) orElse "We need 3 wrappers around the select. A div with the class `control`, with a div with the `field` class inside, and then inside the field a div with the `select` class. See https://bulma.io/documentation/form/general/"
+  "Exercise 2 - add a dropdown to allow the user to change between past/upcoming/all conferences" should {
+    "have a select element inside a field inside a control. (a 'select' is how we represent a dropdown in HTML)" in {
+      (page.select("div.field").size mustBe 1) orElse "To make it look pretty the select will be in a BUlma form which requires 3 wrappers. A div with the class `control`, with a div with the `field` class inside, and then inside the field a div with the `select` class. See https://bulma.io/documentation/form/general/"
       (page.select("div.field > div.control > div.select").asScala must not be empty) orElse "Still two more wrappers to go 😣. See https://bulma.io/documentation/form/general/"
-      (page.select("div.field > div.control > div.select > select[id=query]").size mustBe 1) orElse "Now add a select element with an ID of `query` so we can prefer to it later from ScalaJS"
+      (page.select("div.field > div.control > div.select > select[id=query]").size mustBe 1) orElse "Now add a select element with an ID of `query` so we can interact with it later from the ScalaJS frontend"
 
       val select = page.select("div.field > div.control > div.select > select#query").first
       val selectOptions = select.select("option").asScala.map(_.`val`).toList
-      (selectOptions mustEqual List("upcoming", "past", "all")) orElse "Now add 3 options to the select. They should have the values `upcoming`, `past` and `all` corresponding to the possible values of `model.Query` that are used to call the ConferenceService."
+      (selectOptions mustEqual List("upcoming", "past", "all")) orElse "Now add 3 options to the select. They should have the values `upcoming`, `past` and `all` corresponding to the possible values of shareed `model.Query` enum that are used to call the ConferenceService."
     }
   }
 
