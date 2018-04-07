@@ -10,6 +10,7 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-digest" % "1.1.1")
 addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.20")
 addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.0.3")
 
+addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.1")
 
 libraryDependencies ++= Seq(
   "org.jsoup" % "jsoup" % "1.9.2" % Compile,
