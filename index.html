@@ -55,15 +55,15 @@
           <!-- TODO sbt new playframework/play-scala-seed.g8 -->
           <!-- Expalin project structure with screenshots: https://www.playframework.com/documentation/2.6.x/Anatomy  ??           -->
         <section data-markdown data-separator="^~~~~" data-separator-vertical="^~" data-notes="^Note:">
-          <script type="text/template"> 
+          <script type="text/template">
 ### Setup
 ```
 git clone https://github.com/Grogs/fullstack-scalajs-workshop.git
 cd fullstack-scalajs-workshop
-sbt compile
+sbt test
 ```
 ~~~~
-## Scala.js workshop  
+## Scala.js workshop
 
 ### Greg Dorrell
 
@@ -71,53 +71,41 @@ sbt compile
 
 ### About me
  - Backend Scala dev at Expedia
- - Maintainer of [javadoc.io](http://javadoc.io/)
  - Using Scala.js for personal projects for a few years.
+ - Maintainer of [javadoc.io](http://javadoc.io/)
 ~
-This workshop
+The plan
+
+<a class="fragment" href="http://fullstack-scalajs-workshop.herokuapp.com" target="_blank">http://fullstack-scalajs-workshop.herokuapp.com</a>
 
 Note:
-- I've been using Scala.js for a while, and I think it's great. 
-- I want to get the word out that Scala.js is mature and a pleasure to work with
-- I think more people should use it!
-- So we're going to build a simple website in this workshop.
-- It'll be a page showing all the Scala conferences
-- I'm assuming most of you are backend developers, so we're going to focus on the frontend parts.
+- I've deviated from the abstract. We only have 90 minutes and I think most people have done backend development.
+- So we will focus on the frontend
+- We're going to write the frontend of a Scala conference listing website
 ~~~~
-Before we get any further...  
+Before we get any further...
 
 ### Setup
 ```
 git clone https://github.com/Grogs/fullstack-scalajs-workshop.git
 cd fullstack-scalajs-workshop
-sbt compile
+sbt test
 ```
 
 Note:
-This will take a while, so kick it off whilst I continue talking.
-~~~~
-
-### The plan
-You'll feel comfortable going away and building simple apps with Scala.js.
-
-[http://fullstack-scalajs-workshop.herokuapp.com](http://fullstack-scalajs-workshop.herokuapp.com)
-
-Note:
- - We'll have an introductory talk. I can tell you a bit about Scala.js, and its current state. 
- - Then we'll spend the remaining time building out this Scala conference listing site
-
-
+This will take a while, so kick it off now, and I'll give some background on the libraries we're going to use.
 ~~~~
 ## Play Framework
 
 Note:
 - Who has use Play?
-- It's one of many web frameworks for Scala. 
-- There are two reasons we're using it for this workshop
+- It's one of many web frameworks for Scala.
+- There are two main reasons we're using it for this workshop
 ~
-"Just hit refresh"  
-  
+"Just hit refresh"
+
 Note:
+- DEMO?
 - One of the cool features of Play, which is great when you get started
 - You don't have to keep stopping and startign your app to see changes.
 - Just refresh the page, it'll compile and changes apply them straight away
@@ -145,19 +133,18 @@ Note:
 - So in this example, you'll get a function which takes a customer and an some orders, and returns this page.
 - This gives us compile time safety
 - Twirl supports Scala.js, so we're going to use it to have a shared template across our frontend and backend.
-
-~~~~
-## Scala.js
 ~
-A Scala to JavaScript compiler
+*server code walkthrough*
 
 Note:
-
-Started by Sebastien Doeraene at EPFL around 5 years ago 
-
-Hooks into the Scala compiler, and instead of emitting JVM bytecode, it emits JavaScript
-
-~
+- We have three projects.
+  - `server` - a Play app for the JVM
+  - `client` - out Scala.js code which will be compiled down to JavaScript.
+  - `shared` - shared code (model, any business logic
+- routes, controller, template
+- http://localhost:9000, EventsControllerTest
+~~~~
+Scala to JavaScript compiler
 
 To use it, add a plugin to your SBT build, and enable it for one of your projects.
 
@@ -165,21 +152,21 @@ Note:
 * You can use Gradle and Maven, I've not done it myself.
 * You can have projects that are cross compile projects for JVM and JS, or just pure JS projects.
 * Not everything works (a lot of the Java stdlib isn't available, which Scala stdlib uses).
-** But there's enough for it to be usable for a lot of usecases. 
+** But there's enough for it to be usable for a lot of usecases.
 ** And it's gettng better over time
 ~
-Or clone one of the [skeleton projects](https://www.scala-js.org/libraries/skeletons.html) to get started: 
+Or clone one of the [skeleton projects](https://www.scala-js.org/libraries/skeletons.html) to get started:
 - [A pure Scala.js project](https://github.com/lihaoyi/workbench-example-app)
 - [Play server and Scala.js client](https://github.com/vmunier/play-with-scalajs-example)
 
 ~
-Why use Scala.js?  
+Why use Scala.js?
 
 Note:
 * For me, I love Scala, but I also like frontend development. I'd love to use Scala on the frontend.
 * But actually, there's a bunch of advantages. Sharing one language across the frontend and backend itself gives a bunch of advantages.
 ~
-Share domain model and business logic across client and server.  
+Share domain model and business logic across client and server.
 
 You can refactor some code on the server and the template will be updated!  <!-- .element: class="fragment" -->
 
@@ -191,7 +178,7 @@ Note:
 ** But you need to run it on the server-side to make sure it can't be bypassed.
 ** It seems a shame to write that twice. Overhead, and there can be differences, which makes it for a poor user experience.
 ~
-Make the client more typesafe  
+Make the client more typesafe
 
 Catch more errors at compile time
 
@@ -205,7 +192,7 @@ Note:
 ~
 The type safety goes further than Typescript.
 
-In TypeScript, you can optionally add types.  
+In TypeScript, you can optionally add types.
 In Scala.js, you can optionally go Dynamic.<!-- .element: class="fragment" -->
 
 Note:
@@ -213,14 +200,8 @@ Note:
 * But with Scala.js, by default everything is typed and you can optionally go dynamic
 ** allowing you to call potentially non-existing fields or methods on an object.
 ** Which can be very useful for using an existing JavaScript library, but is something you really want to avoid.
-~ 
-It's mature. Version 1.0 is well on the way.
-
-Note:
-* No longer experimental (since Feb 2015). 
-* People are going it in production.
 ~
-Already has a rich ecosystem.
+It has a rich ecosystem.
 
 ~
 Lots of existing pure scala libraries cross-compile:
@@ -234,11 +215,6 @@ Lots of existing pure scala libraries cross-compile:
 - ScalaTest
 - Most of the standard library, e.g. Futures
 
-<!--
-  TODO
-  Dive into pure-scala libraries
-    Futures map very well to JavaScript promises and allow you to move away from callback hell.
-  -->
 ~
 Typesafe fascades for existing libraries (varying quality):
 - DOM
@@ -253,8 +229,8 @@ Note:
 - DOM fascades are included.
 - React has multiple fascades
   - scalajs-react is the most mature. But it does have quite a steep learning curve.
-  - slinky is another great Scala.js for using React 
-- Some libraries are inherently stringly-typed like Vue or D3, so you don't gain much safety from the fascade, but good for interop. 
+  - slinky is another great Scala.js for using React
+- Some libraries are inherently stringly-typed like Vue or D3, so you don't gain much safety from the fascade, but good for interop.
 
 ~
 Built for Scala.js:
@@ -264,61 +240,38 @@ Built for Scala.js:
 - autowire/sloth for RPC
 - scalajs-bundler
 
-[Rapture HTML Demo](https://embed.scalafiddle.io/embed?sfid=hMgI9Bu/1)<!-- .element: class="fragment" -->
+[Rapture HTML Demo](https://embed.scalafiddle.io/embed?sfid=hMgI9Bu/1)<!-- .element: class="fragment" target="_blank"  -->
 
 Note:
-* ScalaTags is a library for generating HTML. 
+* ScalaTags is a library for generating HTML.
 * Udash is a whole framework for developing apps with Scala.js. It's built and maintained by a Polish company.
-* Diode is a 
-* Jon Pretty's Rapture HTML takes this to the extreme. 
+* Diode is a
+* Jon Pretty's Rapture HTML takes this to the extreme.
   * HTML element nesting constaints at compile time
-  * and even 'style' attribute's CSS validated at compile time. 
+  * and even 'style' attribute's CSS validated at compile time.
   * [Example](https://embed.scalafiddle.io/embed?sfid=hMgI9Bu/1)
   * See 'Principles of Elegance' talk from ScalaDays NY 2016
 
-  ~
+~
 Scala.js even looks similar to JavaScript/ES6, but with types.
 
-[Demo](https://embed.scalafiddle.io/embed?sfid=8D8UXdW/6)
+[Demo](https://embed.scalafiddle.io/embed?sfid=8D8UXdW/6)<!-- .element: target="_blank"  -->
 ~~~~
 
-###My experiences
-~
-[artimap.com](http://www.artimap.com)  
-Play app with a Scala.JS frontend.  
-Scalatags. 😃  
-Writing fascades for JavaScript libraries. 😃  
-Scala.Rx. 🤐  
-Google Maps API. 🤗
-~
-[fulfilmed.com](http://www.fulfilmed.com)  
-
-`scalajs-react`, and then later `slinky`
-  
-Note:
-- On this other personal project I've been using react.
-- I've found slinky to be really nice. It aims to have similar syntax ot ES6-style React, so it's easy to re-use code frameworks for React docs and StackOverflow.
-- And both of these libraries now have nice interopability external JavaScript react components. So you can use other people's React components easily.
-~~~~
-###Resources  
+###Resources
 
 [Scala.js Website](https://www.scala-js.org/)  has tutorials, libraries, skeleton projects
 
 [Scala.js Gitter](https://gitter.im/scala-js/scala-js)
 
 
-[Hands-on Scala.js](http://www.lihaoyi.com/hands-on-scala-js/) by Li Haoyi  
+[Hands-on Scala.js](http://www.lihaoyi.com/hands-on-scala-js/) by Li Haoyi
 [Scala.js SPA-tutorial](https://ochrons.github.io/scalajs-spa-tutorial/en/index.html) by Otto Chrons
 
 [Why I bet on Scala.js](http://www.lihaoyi.com/post/FromfirstprinciplesWhyIbetonScalajs.html) by Li Haoyi
 
 Note:
 Lots of the libraries mentioned have gitter channels. But you can always go to the scala-js to get pointed in the right direction.
-~
-Any questions so far?
-
-Note:
-Before we move on
 ~
 ### What I didn't cover
 
@@ -332,24 +285,37 @@ Note:
 - These are definitely things you should care about if you want to use Scala.js in customer facing projects
 - But then we start needing to thinking about bringing in non-JVM dependencies like selenium and npm.
 - Grab me if you want to talk about these
+
+~~~~
+## <a href="https://bulma.io/documentation/components/card/" target="_blank">Bulma</a>
+Note:
+- Like Boostrap without JavaScript. Bootstrap relies on jQuery, which isn't popular anymore, and doesn't play well with Angular/React.
+- As we go through the exercises, you'll have to add some Bulma cards etc. The README and tests will link out to the apropriate Bulma docs.
+~~~~
+## Autowire
+
+Note:
+- Show ConferenceService in shared
+- Show AutowireController in server
+- Show Client in client
+- Demo JSON over the wire
+~
+Any questions?
+
+Note:
+Before we get into the excercises.
 ~~~~
 ## Exercises
 
 Run `sbt run` so you can see your progress at http://localhost:9000
 
-Exercise 1 (Server-side only) - Display the conferences
-  - `git checkout exercise1`
-  - fix the tests in EventsControllerTest
+- Exercise 1 - Display the conferences
 
-Exercise 2 (Server and client) - Let the user toggle between past/upcoming/all conferences
-- `git checkout exercise2`
-- fix test in EventsControllerTest then follow instructions in README
+- Exercise 2 - Let the user toggle between past/upcoming/all conferences
 
-Exercise 3 (Client-side only) - Add a Google Map of all the conferences
-- `git checkout exercise3`
-- Follow instructions in README
-```
-          </script>         
+- Exercise 3 - Add a Google Map of all the conferences
+
+          </script>
         </section>
       </div>
     </div>
