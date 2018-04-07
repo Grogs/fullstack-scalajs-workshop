@@ -14,6 +14,7 @@ Now go to `me.gregd.fullstack_workshop.App` in the client and update the main me
 
 1. Start by adding an event listener to the newly added select element.
     * Take a look through all the events available and decide which one to use: https://www.w3schools.com/jsref/dom_obj_event.asp
+        * Hint: I recommend looking at `change`, `keyup`, and `keydown`
     * Then you can use the `addEventListener` method on an element to add a new listener.
     * add a println, reload the page and verify that it works as you expect.
 2. When this event gets triggered we want to fetch all the conferences matching that query and re-render the page:
