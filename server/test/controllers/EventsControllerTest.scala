@@ -76,7 +76,7 @@ class EventsControllerTest extends PlaySpec with GuiceOneAppPerTest {
         (card.select("div.card-content > div.content").asScala must not be empty) orElse s"And within card-content we need yet another content wrapper. See $cardDocs"
       }
 
-      val scalaMatsuriCard = conferenceDivs(3).select("div.column > div").first.toString
+      val scalaMatsuriCard = conferenceDivs(2).select("div.column > div").first.toString
       (scalaMatsuriCard must include ("FLATMAP(OSLO)")) orElse "now include the name of each conference inside the card"
       (scalaMatsuriCard must include ("Oslo, Norway")) orElse "now include the location of each conference inside the card"
       (scalaMatsuriCard must include ("2018-05-03 - 2018-05-04")) orElse "now include the dates of each conference inside the card. You can use the provided `date` function inside 'eventsTable'."
