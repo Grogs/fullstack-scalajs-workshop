@@ -56,7 +56,7 @@ class EventsControllerTest extends PlaySpec with GuiceOneAppPerTest {
     }
 
     "container an entry for every upcoming conference" in {
-      (conferenceDivs.size mustEqual 18) orElse "Now add a div for each event. You'll need to iterate over each event and return a div, see https://www.playframework.com/documentation/2.6.x/ScalaTemplates#iterating"
+      (conferenceDivs.size mustEqual 17) orElse "Now add a div for each event. You'll need to iterate over each event and return a div, see https://www.playframework.com/documentation/2.6.x/ScalaTemplates#iterating"
     }
 
     "use Bulma's column layout" in {
